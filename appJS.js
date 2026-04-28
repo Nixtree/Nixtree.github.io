@@ -6,6 +6,10 @@ const pokeLogo = document.getElementById("pokeLogo")
 const reponceUser = document.getElementById("reponceInput")
 let pokeIMG = document.getElementById("pokemonIMG")
 const question = document.getElementById("question")
+const scoreCase = document.getElementById("scoreCase")
+const result = document.getElementById("result")
+const who = document.getElementById("who")
+
 let statue = "lunchScreen"
 let reponceName
 
@@ -19,9 +23,9 @@ startBtn.addEventListener("click", () => {
         chose()
     }else if(statue == "inGame"){
         if(reponceUser.value.toUpperCase() == reponceName.toUpperCase()){
-            // ecran victoire
+            win()
         }else{
-            // ecran defaite
+            defaite()
         }
     }
 })
@@ -40,4 +44,28 @@ function chose(){
         .then(species => {
             reponceName = species.names.find(n => n.language.name == "fr").name
         })
+}
+
+function win(){
+    question.style.visibility = "hidden"
+    pokeIMG.style.visibility = "hidden"
+    startBtn.style.visibility = "hidden"
+    reponceUser.style.visibility = "hidden"
+    scoreCase.style.visibility = "visible"
+    result.style.visibility = "visible"
+    who.style.visibility = "visible"
+    result.textContent = "vous avez gagné !!"
+    who.textContent = "c'était : " + reponceName
+}
+
+function defaite(){
+    question.style.visibility = "hidden"
+    pokeIMG.style.visibility = "hidden"
+    startBtn.style.visibility = "hidden"
+    reponceUser.style.visibility = "hidden"
+    scoreCase.style.visibility = "visible"
+    result.style.visibility = "visible"
+    who.style.visibility = "visible"
+    result.textContent = "vous avez perdu ..."
+    who.textContent = "c'était : " + reponceName
 }
