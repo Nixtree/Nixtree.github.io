@@ -8,6 +8,7 @@ body{
     position: absolute;
     top: -0px;
     left: -0px;
+    border: 1px solid black;
 }
 
 #nextPoke{
@@ -65,4 +66,5 @@ body{
     left: 8%;
     color: rgb(36, 36, 36);
     visibility: hidden;
+    font-size: 200%;
 }
