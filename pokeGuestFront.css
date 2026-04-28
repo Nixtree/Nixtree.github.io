@@ -1,5 +1,5 @@
 html, body{
-    overflow = "hidden";
+    overflow: hidden;
 }
 #screen{
     position: absolute;
@@ -65,4 +65,30 @@ html, body{
     font-size: 200%;
     width: 70%;
     height: 40%;
+}
+
+#scoreCase{
+    height: 35%;
+    width: 80%;
+    box-shadow: 0 0 3px 0 rgb(70, 70, 70);
+    position: relative;
+    top: -80%;
+    left: 10%;
+    visibility: hidden;
+}
+
+#result{
+    position: relative;
+    top: -110%;
+    left: 40%;
+    font-size: 300%;
+    visibility: hidden;
+}
+
+#who{
+    position: relative;
+    top: -105%;
+    left: 30%;
+    font-size: 150%;
+    visibility: hidden;
 }
