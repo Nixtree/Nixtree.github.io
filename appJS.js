@@ -1,3 +1,6 @@
+const screen = document.getElementById("screen")
+screen.style.width = window.screen.width + "px"
+screen.style.height = window.screen.height + "px"
 const startBtn = document.getElementById("nextPoke")
 const pokeLogo = document.getElementById("pokeLogo")
 const reponceUser = document.getElementById("reponceInput")
