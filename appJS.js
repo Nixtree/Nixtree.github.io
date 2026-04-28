@@ -1,21 +1,40 @@
 const startBtn = document.getElementById("nextPoke")
 const pokeLogo = document.getElementById("pokeLogo")
 const reponceUser = document.getElementById("reponceInput")
-const pokeIMG = document.getElementById("pokemonIMG")
+let pokeIMG = document.getElementById("pokemonIMG")
 const question = document.getElementById("question")
 let statue = "lunchScreen"
+let reponceName
 
 startBtn.addEventListener("click", () => {
-    if(statue = "lunchScreen"){
+    if(statue == "lunchScreen"){
         statue = "inGame"
         startBtn.textContent = "valider !"
         pokeLogo.style.visibility = "hidden"
         reponceUser.style.visibility = "visible"
         question.style.visibility = "visible"
         chose()
+    }else if(statue == "inGame"){
+        if(reponceUser.value.toUpperCase() == reponceName.toUpperCase()){
+            // ecran victoire
+        }else{
+            // ecran defaite
+        }
     }
 })
 
 function chose(){
-    pokeIMG.src = "pokeGuest LOGO.png"
+    let id = Math.floor(Math.random() * 1025 ) +1
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            let nextIMG = data.sprites.front_default
+            pokeIMG.src = nextIMG
+            pokeIMG.style.visibility = "visible"
+            return fetch(data.species.url)
+        })
+        .then(res => res.json())
+        .then(species => {
+            reponceName = species.names.find(n => n.language.name == "fr").name
+        })
 }
