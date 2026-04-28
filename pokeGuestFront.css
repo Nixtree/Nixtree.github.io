@@ -1,3 +1,6 @@
+body{
+    overflow = "hidden";
+}
 #screen{
     position: absolute;
     top: -0px;
