@@ -30,10 +30,12 @@ startBtn.addEventListener("click", () => {
             win()
             statue = "lunchScreen"
             pokeIMG.style.visibility = "hidden"
+            reponceUser.value =""
         }else{
             defaite()
             statue = "lunchScreen"
             pokeIMG.style.visibility = "hidden"
+            reponceUser.value =""
         }
     }
 })
