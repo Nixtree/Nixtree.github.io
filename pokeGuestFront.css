@@ -70,7 +70,7 @@ html, body{
 #scoreCase{
     height: 35%;
     width: 80%;
-    box-shadow: 0 0 3px 0 rgb(70, 70, 70);
+    box-shadow: 0 0 2% 0 rgb(70, 70, 70);
     position: relative;
     top: -80%;
     left: 10%;
