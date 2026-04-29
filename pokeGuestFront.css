@@ -79,16 +79,16 @@ html, body{
 
 #result{
     position: absolute;
-    top: 40%;
-    font-size: 80%;
+    top: 35%;
+    font-size: 120%;
     left: 10%;
     visibility: hidden;
 }
 
 #who{
     position: absolute;
-    top: 50%;
-    font-size: 150%;
+    top: 40%;
+    font-size: 140%;
     visibility: hidden;
-    left: 15%;
+    left: 20%;
 }
