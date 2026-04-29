@@ -77,11 +77,13 @@ html, body{
     visibility: hidden;
 }
 
+
 #result{
     position: absolute;
     top: 40%;
     left: 40%;
-    font-size: 300%;
+    align-items: center;
+    font-size: 150%;
     visibility: hidden;
 }
 
@@ -90,5 +92,6 @@ html, body{
     top: 50%;
     left: 30%;
     font-size: 150%;
+    align-items: center;
     visibility: hidden;
 }
