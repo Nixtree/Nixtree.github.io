@@ -20,12 +20,18 @@ startBtn.addEventListener("click", () => {
         pokeLogo.style.visibility = "hidden"
         reponceUser.style.visibility = "visible"
         question.style.visibility = "visible"
-        chose()
+        scoreCase.style.visibility = "hidden"
+        result.style.visibility = "hidden"
+        who.style.visibility = "hidden"
+        chose
+
     }else if(statue == "inGame"){
         if(reponceUser.value.toUpperCase() == reponceName.toUpperCase()){
             win()
+            statue = "lunchScreen"
         }else{
             defaite()
+            statue = "lunchScreen"
         }
     }
 })
@@ -48,7 +54,7 @@ function chose(){
 
 function win(){
     question.style.visibility = "hidden"
-    pokeIMG.style.visibility = "hidden"
+    pokeIMG.style.visibility = "visible"
     startBtn.style.visibility = "hidden"
     reponceUser.style.visibility = "hidden"
     scoreCase.style.visibility = "visible"
@@ -56,16 +62,18 @@ function win(){
     who.style.visibility = "visible"
     result.textContent = "vous avez gagné !!"
     who.textContent = "c'était : " + reponceName
+    startBtn.textContent = "rejouer !"
 }
 
 function defaite(){
     question.style.visibility = "hidden"
     pokeIMG.style.visibility = "hidden"
-    startBtn.style.visibility = "hidden"
+    startBtn.style.visibility = "visible"
     reponceUser.style.visibility = "hidden"
     scoreCase.style.visibility = "visible"
     result.style.visibility = "visible"
     who.style.visibility = "visible"
     result.textContent = "vous avez perdu ..."
     who.textContent = "c'était : " + reponceName
+    startBtn.textContent = "rejouer !"
 }
