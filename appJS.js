@@ -41,7 +41,7 @@ startBtn.addEventListener("click", () => {
 })
 
 function chose(){
-    let id = Math.floor(Math.random() * 1025 ) +1
+    let id = Math.floor(Math.random() * 807) +1
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then(res => res.json())
         .then(data => {
