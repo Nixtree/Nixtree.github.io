@@ -58,8 +58,8 @@ function chose(){
 
 function win(){
     question.style.visibility = "hidden"
-    pokeIMG.style.visibility = "visible"
-    startBtn.style.visibility = "hidden"
+    pokeIMG.style.visibility = "hidden"
+    startBtn.style.visibility = "visible"
     reponceUser.style.visibility = "hidden"
     scoreCase.style.visibility = "visible"
     result.style.visibility = "visible"
