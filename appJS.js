@@ -23,15 +23,17 @@ startBtn.addEventListener("click", () => {
         scoreCase.style.visibility = "hidden"
         result.style.visibility = "hidden"
         who.style.visibility = "hidden"
-        chose
+        chose()
 
     }else if(statue == "inGame"){
         if(reponceUser.value.toUpperCase() == reponceName.toUpperCase()){
             win()
             statue = "lunchScreen"
+            pokeIMG.style.visibility = "hidden"
         }else{
             defaite()
             statue = "lunchScreen"
+            pokeIMG.style.visibility = "hidden"
         }
     }
 })
