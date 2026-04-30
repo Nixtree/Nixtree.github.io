@@ -218,3 +218,25 @@ html, body{
     border-radius: 15px;
     visibility: hidden;
 }
+
+#croix1{
+    position: absolute;
+    height: 2%;
+    width: 5%;
+    left: 30.5%;
+    top: 75%;
+}
+#croix2{
+    position: absolute;
+    height: 2%;
+    width: 5%;
+    left: 38.5%;
+    top: 75%;
+}
+#croix3{
+    position: absolute;
+    height: 2%;
+    width: 5%;
+    left: 46.5%;
+    top: 75%;
+}
