@@ -21,6 +21,8 @@ const btnGen8 = document.getElementById("gen8")
 const btnGen9 = document.getElementById("gen9")
 const menuBTN = document.getElementById("menuBTN")
 
+let genActive = [{etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}]
+
 let statue = "lunchScreen"
 let reponceName
 
@@ -143,5 +145,136 @@ menuBTN.addEventListener("click", () => {
         btnGen7.style.visibility = "visible"
         btnGen8.style.visibility = "visible"
         btnGen9.style.visibility = "visible"
+    }
+})
+
+gen1Stat = true
+btnGen1.addEventListener("click" , () => {
+    if(gen1Stat){
+        gen1Stat = false
+        btnGen1.style.backgroundColor = "white"
+        btnGen1.style.color = "black"
+        genActive[0].etat = "null"
+    }else{
+        gen1Stat = true
+        btnGen1.style.backgroundColor = "rgb(9, 124, 201)"
+        btnGen1.style.color = "white"
+        genActive[0].etat = "active"
+    }
+})
+
+gen2Stat = true
+btnGen2.addEventListener("click" , () => {
+    if(gen2Stat){
+        gen2Stat = false
+        btnGen2.style.backgroundColor = "white"
+        btnGen2.style.color = "black"
+        genActive[1].etat = "null"
+    }else{
+        gen2Stat = true
+        btnGen2.style.backgroundColor = "rgb(9, 124, 201)"
+        btnGen2.style.color = "white"
+        genActive[1].etat = "active"
+    }
+})
+gen3Stat = true
+btnGen3.addEventListener("click" , () => {
+    if(gen3Stat){
+        gen3Stat = false
+        btnGen3.style.backgroundColor = "white"
+        btnGen3.style.color = "black"
+        genActive[2].etat = "null"
+    }else{
+        gen3Stat = true
+        btnGen3.style.backgroundColor = "rgb(9, 124, 201)"
+        btnGen3.style.color = "white"
+        genActive[2].etat = "active"
+    }
+})
+
+gen4Stat = true
+btnGen4.addEventListener("click" , () => {
+    if(gen4Stat){
+        gen4Stat = false
+        btnGen4.style.backgroundColor = "white"
+        btnGen4.style.color = "black"
+        genActive[3].etat = "null"
+    }else{
+        gen4Stat = true
+        btnGen4.style.backgroundColor = "rgb(9, 124, 201)"
+        btnGen4.style.color = "white"
+        genActive[3].etat = "active"
+    }
+})
+gen5Stat = true
+btnGen5.addEventListener("click" , () => {
+    if(gen5Stat){
+        gen5Stat = false
+        btnGen5.style.backgroundColor = "white"
+        btnGen5.style.color = "black"
+        genActive[4].etat = "null"
+    }else{
+        gen5Stat = true
+        btnGen5.style.backgroundColor = "rgb(9, 124, 201)"
+        btnGen5.style.color = "white"
+        genActive[4].etat = "active"
+    }
+})
+
+gen6Stat = true
+btnGen6.addEventListener("click" , () => {
+    if(gen6Stat){
+        gen6Stat = false
+        btnGen6.style.backgroundColor = "white"
+        btnGen6.style.color = "black"
+        genActive[5].etat = "null"
+    }else{
+        gen6Stat = true
+        btnGen6.style.backgroundColor = "rgb(9, 124, 201)"
+        btnGen6.style.color = "white"
+        genActive[5].etat = "active"
+    }
+})
+gen7Stat = true
+btnGen7.addEventListener("click" , () => {
+    if(gen7Stat){
+        gen7Stat = false
+        btnGen7.style.backgroundColor = "white"
+        btnGen7.style.color = "black"
+        genActive[6].etat = "null"
+    }else{
+        gen7Stat = true
+        btnGen7.style.backgroundColor = "rgb(9, 124, 201)"
+        btnGen7.style.color = "white"
+        genActive[6].etat = "active"
+    }
+})
+
+gen8Stat = true
+btnGen8.addEventListener("click" , () => {
+    if(gen8Stat){
+        gen8Stat = false
+        btnGen8.style.backgroundColor = "white"
+        btnGen8.style.color = "black"
+        genActive[7].etat = "null"
+    }else{
+        gen8Stat = true
+        btnGen8.style.backgroundColor = "rgb(9, 124, 201)"
+        btnGen8.style.color = "white"
+        genActive[7].etat = "active"
+    }
+})
+gen9Stat = true
+btnGen9.addEventListener("click" , () => {
+    if(gen9Stat){
+        gen9Stat = false
+        btnGen9.style.backgroundColor = "white"
+        btnGen9.style.color = "black"
+        genActive[8].etat = "null"
+    }else{
+        gen9Stat = true
+        btnGen9.style.backgroundColor = "rgb(9, 124, 201)"
+        btnGen9.style.color = "white"
+        genActive[8].etat = "active"
     }
 })
