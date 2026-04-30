@@ -31,6 +31,13 @@ let statue = "lunchScreen"
 let reponceName
 let faute = 0
 
+if(localStorage.getItem("score") == undefined){
+    console.log("il n'esxiste pas encore");
+    localStorage.setItem("score", 0)    
+}
+
+let score = parseInt(localStorage.getItem("score"))
+
 startBtn.addEventListener("click", () => {
     if(statue == "lunchScreen"){
         statue = "inGame"
@@ -93,8 +100,16 @@ function win(){
     croix1.style.visibility = "hidden"
     croix2.style.visibility = "hidden"
     croix3.style.visibility = "hidden"
+    if(faute == 0){
+        score += 15
+    }else if(faute == 1){
+        score += 10
+    }else if(faute == 2){
+        score += 5
+    }
     faute = 0
     statue = "lunchScreen"
+    localStorage.setItem("score", score)
 }
 
 function defaite(){
@@ -160,7 +175,6 @@ menuBTN.addEventListener("click", () => {
             croix2.style.visibility = "visible"
         }else if(faute == 2 && statue === "inGame"){
             croix1.style.visibility = "visible"
-
         }
 
     }else{
