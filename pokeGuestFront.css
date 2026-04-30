@@ -96,7 +96,125 @@ html, body{
 #menuBTN{
     position: absolute;
     top: 5%;
-    left: 80%;
+    left: 90%;
     height: 8%;
     width: 15%;
+}
+
+#gen1{
+    position: absolute;
+    height: 12%;
+    width: 40%;
+    left: 6%;
+    top: 19%;
+    border: 4px solid rgb(9, 124, 201);
+    background-color: rgb(9, 124, 201);
+    color: white;
+    font-size: 130%;
+    border-radius: 15px;
+    visibility: hidden;
+}
+#gen2{
+    position: absolute;
+    height: 12%;
+    width: 40%;
+    left: 50%;
+    top: 19%;
+    border: 4px solid rgb(9, 124, 201);
+    background-color: rgb(9, 124, 201);
+    color: white;
+    font-size: 130%;
+    border-radius: 15px;
+    visibility: hidden;
+}
+#gen3{
+    position: absolute;
+    height: 12%;
+    width: 40%;
+    left: 6%;
+    top: 35%;
+    border: 4px solid rgb(9, 124, 201);
+    background-color: rgb(9, 124, 201);
+    color: white;
+    font-size: 130%;
+    border-radius: 15px;
+    visibility: hidden;
+}
+#gen4{
+    position: absolute;
+    height: 12%;
+    width: 40%;
+    left: 50%;
+    top: 35%;
+    border: 4px solid rgb(9, 124, 201);
+    background-color: rgb(9, 124, 201);
+    color: white;
+    font-size: 130%;
+    border-radius: 15px;
+    visibility: hidden;
+}
+#gen5{
+    position: absolute;
+    height: 12%;
+    width: 40%;
+    left: 6%;
+    top: 51%;
+    border: 4px solid rgb(9, 124, 201);
+    background-color: rgb(9, 124, 201);
+    color: white;
+    font-size: 130%;
+    border-radius: 15px;
+    visibility: hidden;
+}
+#gen6{
+    position: absolute;
+    height: 12%;
+    width: 40%;
+    left: 50%;
+    top: 51%;
+    border: 4px solid rgb(9, 124, 201);
+    background-color: rgb(9, 124, 201);
+    color: white;
+    font-size: 130%;
+    border-radius: 15px;
+    visibility: hidden;
+}
+#gen7{
+    position: absolute;
+    height: 12%;
+    width: 40%;
+    left: 6%;
+    top: 67%;
+    border: 4px solid rgb(9, 124, 201);
+    background-color: rgb(9, 124, 201);
+    color: white;
+    font-size: 130%;
+    border-radius: 15px;
+    visibility: hidden;
+}
+#gen8{
+    position: absolute;
+    height: 12%;
+    width: 40%;
+    left: 50%;
+    top: 67%;
+    border: 4px solid rgb(9, 124, 201);
+    background-color: rgb(9, 124, 201);
+    color: white;
+    font-size: 130%;
+    border-radius: 15px;
+    visibility: hidden;
+}
+#gen9{
+    position: absolute;
+    height: 12%;
+    width: 40%;
+    left: 28%;
+    top: 83%;
+    border: 4px solid rgb(9, 124, 201);
+    background-color: rgb(9, 124, 201);
+    color: white;
+    font-size: 130%;
+    border-radius: 15px;
+    visibility: hidden;
 }
