@@ -21,10 +21,15 @@ const btnGen8 = document.getElementById("gen8")
 const btnGen9 = document.getElementById("gen9")
 const menuBTN = document.getElementById("menuBTN")
 
+const croix1 = document.getElementById("croix1")
+const croix2 = document.getElementById("croix2")
+const croix3 = document.getElementById("croix3")
+
 let genActive = [{etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}, {etat:"active"}]
 
 let statue = "lunchScreen"
 let reponceName
+let faute = 0
 
 startBtn.addEventListener("click", () => {
     if(statue == "lunchScreen"){
@@ -36,18 +41,22 @@ startBtn.addEventListener("click", () => {
         scoreCase.style.visibility = "hidden"
         result.style.visibility = "hidden"
         who.style.visibility = "hidden"
-        chose()
+
+        if(faute == 0){
+            chose()               
+            croix1.style.visibility = "visible"
+            croix2.style.visibility = "visible"
+            croix3.style.visibility = "visible"     
+        }
+
 
     }else if(statue == "inGame"){
         if(reponceUser.value.toUpperCase() == reponceName.toUpperCase()){
             win()
             statue = "lunchScreen"
-            pokeIMG.style.visibility = "hidden"
             reponceUser.value =""
         }else{
             defaite()
-            statue = "lunchScreen"
-            pokeIMG.style.visibility = "hidden"
             reponceUser.value =""
         }
     }
@@ -67,6 +76,7 @@ function chose(){
         .then(species => {
             reponceName = species.names.find(n => n.language.name == "fr").name
         })
+        faute = 0
 }
 
 function win(){
@@ -83,16 +93,28 @@ function win(){
 }
 
 function defaite(){
-    question.style.visibility = "hidden"
-    pokeIMG.style.visibility = "hidden"
-    startBtn.style.visibility = "visible"
-    reponceUser.style.visibility = "hidden"
-    scoreCase.style.visibility = "visible"
-    result.style.visibility = "visible"
-    who.style.visibility = "visible"
-    result.textContent = "vous avez perdu ..."
-    who.textContent = "c'était : " + reponceName
-    startBtn.textContent = "rejouer !"
+    if(faute === 2){
+        croix1.style.visibility = "hidden"
+        question.style.visibility = "hidden"
+        pokeIMG.style.visibility = "hidden"
+        startBtn.style.visibility = "visible"
+        reponceUser.style.visibility = "hidden"
+        scoreCase.style.visibility = "visible"
+        result.style.visibility = "visible"
+        who.style.visibility = "visible"
+        result.textContent = "vous avez perdu ..."
+        who.textContent = "c'était : " + reponceName
+        startBtn.textContent = "rejouer !"       
+        faute = 0
+        statue = "lunchScreen"
+    }else if(faute === 1){
+        faute = 2
+        croix2.style.visibility = "hidden"
+    }else if(faute === 0){
+        faute = 1
+        croix3.style.visibility = "hidden"
+    }
+
 }
 
 let open = false
