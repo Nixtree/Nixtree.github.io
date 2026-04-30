@@ -54,7 +54,7 @@ startBtn.addEventListener("click", () => {
 })
 
 function chose(){
-    let id = Math.floor(Math.random() * 1025 ) +1
+    let id = choseID()
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         .then(res => res.json())
         .then(data => {
@@ -278,3 +278,35 @@ btnGen9.addEventListener("click" , () => {
         genActive[8].etat = "active"
     }
 })
+
+function choseID(){
+    let array = []
+    for(let i = 1; i != 10; i++){
+        if(genActive[i-1].etat === "active"){
+            array.push(i)
+        }
+    }
+    let randGen = Math.floor(Math.random() * array.length) + 1
+    let randID
+    if(randGen == 1){
+        randID = Math.floor(Math.random() * 151) + 1
+    }else if(randGen == 2){
+        randID = Math.floor(Math.random() * 100) + 152
+    }else if(randGen == 3){
+        randID = Math.floor(Math.random() * 135) + 252
+    }else if(randGen == 4){
+        randID = Math.floor(Math.random() * 107) + 387
+    }else if(randGen == 5){
+        randID = Math.floor(Math.random() * 156) + 494
+    }else if(randGen == 6){
+        randID = Math.floor(Math.random() * 72) + 650
+    }else if(randGen == 7){
+        randID = Math.floor(Math.random() * 88) + 722
+    }else if(randGen == 8){
+        randID = Math.floor(Math.random() * 96) + 810
+    }else if(randGen == 9){
+        randID = Math.floor(Math.random() * 120) + 906
+    }
+
+    return randID
+}
