@@ -41,19 +41,19 @@ startBtn.addEventListener("click", () => {
         scoreCase.style.visibility = "hidden"
         result.style.visibility = "hidden"
         who.style.visibility = "hidden"
-
         if(faute == 0){
-            chose()               
+            chose()      
             croix1.style.visibility = "visible"
             croix2.style.visibility = "visible"
-            croix3.style.visibility = "visible"     
+            croix3.style.visibility = "visible"                   
         }
+
+    
 
 
     }else if(statue == "inGame"){
         if(reponceUser.value.toUpperCase() == reponceName.toUpperCase()){
             win()
-            statue = "lunchScreen"
             reponceUser.value =""
         }else{
             defaite()
@@ -90,6 +90,11 @@ function win(){
     result.textContent = "vous avez gagné !!"
     who.textContent = "c'était : " + reponceName
     startBtn.textContent = "rejouer !"
+    croix1.style.visibility = "hidden"
+    croix2.style.visibility = "hidden"
+    croix3.style.visibility = "hidden"
+    faute = 0
+    statue = "lunchScreen"
 }
 
 function defaite(){
@@ -104,7 +109,7 @@ function defaite(){
         who.style.visibility = "visible"
         result.textContent = "vous avez perdu ..."
         who.textContent = "c'était : " + reponceName
-        startBtn.textContent = "rejouer !"       
+        startBtn.textContent = "rejouer !"  
         faute = 0
         statue = "lunchScreen"
     }else if(faute === 1){
@@ -146,6 +151,17 @@ menuBTN.addEventListener("click", () => {
         btnGen7.style.visibility = "hidden"
         btnGen8.style.visibility = "hidden"
         btnGen9.style.visibility = "hidden"
+        if(faute == 0 && statue === "inGame"){
+            croix1.style.visibility = "visible"
+            croix2.style.visibility = "visible"
+            croix3.style.visibility = "visible"            
+        }else if(faute == 1 && statue === "inGame"){
+            croix1.style.visibility = "visible"
+            croix2.style.visibility = "visible"
+        }else if(faute == 2 && statue === "inGame"){
+            croix1.style.visibility = "visible"
+
+        }
 
     }else{
         open = true
@@ -157,6 +173,11 @@ menuBTN.addEventListener("click", () => {
         scoreCase.style.visibility = "hidden"
         result.style.visibility = "hidden"
         who.style.visibility = "hidden"
+
+        croix1.style.visibility = "hidden"
+        croix2.style.visibility = "hidden"
+        croix3.style.visibility = "hidden"
+
 
         btnGen1.style.visibility = "visible"
         btnGen2.style.visibility = "visible"
