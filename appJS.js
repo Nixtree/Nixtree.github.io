@@ -218,7 +218,7 @@ btnGen1.addEventListener("click" , () => {
         btnGen1.style.color = "white"
         genActive[0].etat = "active"
     }
-    stockGenSelect()
+
 })
 
 gen2Stat = true
@@ -234,7 +234,7 @@ btnGen2.addEventListener("click" , () => {
         btnGen2.style.color = "white"
         genActive[1].etat = "active"
     }
-    stockGenSelect()
+
 })
 gen3Stat = true
 btnGen3.addEventListener("click" , () => {
@@ -249,7 +249,7 @@ btnGen3.addEventListener("click" , () => {
         btnGen3.style.color = "white"
         genActive[2].etat = "active"
     }
-    stockGenSelect()
+
 })
 
 gen4Stat = true
@@ -265,7 +265,7 @@ btnGen4.addEventListener("click" , () => {
         btnGen4.style.color = "white"
         genActive[3].etat = "active"
     }
-    stockGenSelect()
+
 })
 gen5Stat = true
 btnGen5.addEventListener("click" , () => {
@@ -279,8 +279,7 @@ btnGen5.addEventListener("click" , () => {
         btnGen5.style.backgroundColor = "rgb(9, 124, 201)"
         btnGen5.style.color = "white"
         genActive[4].etat = "active"
-    }
-    stockGenSelect()
+    }
 })
 
 gen6Stat = true
@@ -296,7 +295,7 @@ btnGen6.addEventListener("click" , () => {
         btnGen6.style.color = "white"
         genActive[5].etat = "active"
     }
-    stockGenSelect()
+
 })
 gen7Stat = true
 btnGen7.addEventListener("click" , () => {
@@ -311,7 +310,7 @@ btnGen7.addEventListener("click" , () => {
         btnGen7.style.color = "white"
         genActive[6].etat = "active"
     }
-    stockGenSelect()
+
 })
 
 gen8Stat = true
@@ -327,7 +326,7 @@ btnGen8.addEventListener("click" , () => {
         btnGen8.style.color = "white"
         genActive[7].etat = "active"
     }
-    stockGenSelect()
+
 })
 gen9Stat = true
 btnGen9.addEventListener("click" , () => {
@@ -342,28 +341,18 @@ btnGen9.addEventListener("click" , () => {
         btnGen9.style.color = "white"
         genActive[8].etat = "active"
     }
-    stockGenSelect()
+
 })
 
 function choseID(){
 
     let array = []
-    if(localStorage.getItem("genSelect") != undefined){
+    
         for(let i = 1; i != 10; i++){
             if(genActive[i-1].etat === "active"){
                 array.push(i)
             }
-        }        
-        console.log('faire ca');
-        
-    }else{
-        let iV = localStorage.getItem("genSelect")
-        for(let i = 0; i<iV.length; i++){
-            if(iV[i] != ","){
-                array.push(iV[i])
-            }
-        }
-    }
+        }        
  
 
 
@@ -392,16 +381,4 @@ function choseID(){
     return randID
 }
 
-function stockGenSelect(){
-    if(localStorage.getItem("genSelect") != undefined){
-        arrayI = []
-        for(let i = 1; i!=10; i++){
-            if(genActive[i-1].etat === "active"){
-                arrayI.push(i)
-                
-            }
-        }
-        localStorage.setItem("genSelect", arrayI)        
-    }
 
-}
